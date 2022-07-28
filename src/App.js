@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {Router, Switch, Link, Route} from "wouter"
+import Home from './pages/home/Home';
+import SinglePost from './pages/single-post/SinglePost';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/post" component={SinglePost} />
+        <Route path="/about" component={SinglePost} />
+        <Route path="/" component={SinglePost} />
+      </Switch>  
+      
+    </Router>
   );
 }
 
