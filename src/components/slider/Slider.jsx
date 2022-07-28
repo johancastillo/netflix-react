@@ -66,6 +66,8 @@ const Slider = () => {
     });
   }, []);
 
+ 
+
   return (
     <>
       <div className="peliculas-recomendadas contenedor">

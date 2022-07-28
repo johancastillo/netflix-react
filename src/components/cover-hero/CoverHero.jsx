@@ -1,6 +1,11 @@
 import React from "react";
 
 const CoverHero = () => {
+
+    const message = () => {
+        alert("Te amo Scarlys")
+    }
+
   return (
     <div className="pelicula-principal">
       <div className="contenedor">
@@ -11,7 +16,7 @@ const CoverHero = () => {
           limitaciones de los viajes espaciales tripulados y vencer las inmensas
           distancias que tiene un viaje interestelar.
         </p>
-        <button role="button" className="boton">
+        <button role="button" className="boton" onClick={message}>
           <i className="fas fa-play" />
           Reproducir
         </button>
